@@ -93,3 +93,30 @@ instaclone=# select users.username as liked_glenda_post from users inner join li
  Paula
 (4 rows)
 ```
+- 5. Edina needs to know the post count which are liked by others.
+```
+instaclone=# SELECT COUNT(DISTINCT posts.postid)
+FROM posts inner join likes on posts.postid=likes.postid where posts.userid = 1;
+ count
+-------
+     2
+(1 row)
+```
+- 6. Paula needs to check the count of awarness and trickes likes count, here awarness id is 17 and trickes id is 20.
+```
+instaclone=# SELECT COUNT(likes.likeid)
+FROM likes where likes.postid = 17 or likes.postid=20;
+ count
+-------
+     2
+(1 row)
+```
+here we checked the likes for awarness-17 and landsale-19.
+```
+instaclone=# SELECT COUNT(likes.likeid)
+FROM likes where likes.postid = 17 or likes.postid=19;
+ count
+-------
+     4
+(1 row)
+```
