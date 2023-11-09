@@ -67,3 +67,29 @@ instaclone=# SELECT * from posts
      20 | Tricks      | 2023-11-08 |      4
 (20 rows)
 ```
+- 3. List posts that are liked by colin `select posts.postcontent as likedByColin from posts left join likes on posts.postid = likes.postid where likes.userid = 2;`
+
+```
+instaclone=# select posts.postcontent as likedByColin from posts left join likes on posts.postid = likes.postid where likes.userid = 2;
+ likedbycolin
+--------------
+ Tips
+ Cartoon
+ Book
+ Award
+ Comedy
+ LandSale
+(6 rows)
+```
+- 4. As a Glenda, she wants to know who are all liked her post book.
+     `select users.username as liked_glenda_post from users inner join likes on users.userid=likes.userid where likes.postid=13;`
+```
+instaclone=# select users.username as liked_glenda_post from users inner join likes on users.userid=likes.userid where likes.postid=13;
+ liked_glenda_post
+-------------------
+ Edina
+ Colin
+ Glenda
+ Paula
+(4 rows)
+```
