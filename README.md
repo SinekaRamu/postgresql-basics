@@ -170,3 +170,15 @@ instaclone=# select postid, count(postid) from likes GROUP BY postid HAVING COUN
       7 |     4
 (2 rows)
 ```
+12. In Edina, sort posts by title in forward. post content is ordered by ascending order for the user edina.
+```
+instaclone=# select * from posts where userid=1 ORDER BY postcontent;
+ postid | postcontent |  postdate  | userid
+--------+-------------+------------+--------
+      1 | Craft       | 2023-11-08 |      1
+      3 | Design      | 2023-11-08 |      1
+      5 | Lesson      | 2023-11-08 |      1
+      2 | Sale        | 2023-11-08 |      1
+      4 | Tips        | 2023-11-08 |      1
+(5 rows)
+```
