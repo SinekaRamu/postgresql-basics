@@ -194,3 +194,11 @@ instaclone=# select * from posts where userid=4 ORDER BY postdate DESC;
      20 | Tricks      | 2023-11-06 |      4
 (5 rows)
 ```
+14. Filter today posted posts.
+```
+instaclone=# select * from posts where postdate= 'today';
+ postid | postcontent |  postdate  | userid
+--------+-------------+------------+--------
+     16 | Gold        | 2023-11-09 |      4
+(1 row)
+```
