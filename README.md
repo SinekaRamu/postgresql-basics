@@ -182,3 +182,15 @@ instaclone=# select * from posts where userid=1 ORDER BY postcontent;
       4 | Tips        | 2023-11-08 |      1
 (5 rows)
 ```
+13. In Paula, sort post by date backward.
+```
+instaclone=# select * from posts where userid=4 ORDER BY postdate DESC;
+ postid | postcontent |  postdate  | userid
+--------+-------------+------------+--------
+     16 | Gold        | 2023-11-09 |      4
+     17 | Awarness    | 2023-11-08 |      4
+     19 | LandSale    | 2023-11-08 |      4
+     18 | Experiments | 2023-11-07 |      4
+     20 | Tricks      | 2023-11-06 |      4
+(5 rows)
+```
