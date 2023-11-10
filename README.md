@@ -161,3 +161,12 @@ instaclone=# select COUNT(likes.likeid) AS cartoon_likes from likes where likes.
              4
 (1 row)
 ```
+11. Get the maximum likes posts.
+```
+instaclone=# select postid, count(postid) from likes GROUP BY postid HAVING COUNT(postid)>1 order by count(postid) desc limit 2;
+ postid | count
+--------+-------
+     13 |     4
+      7 |     4
+(2 rows)
+```
