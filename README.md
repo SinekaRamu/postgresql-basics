@@ -55,6 +55,8 @@ WHERE  posts.userid=2;
 10. select COUNT(likes.likeid) AS cartoon_likes from likes where likes.postid = 7;
 11. select postid, count(postid) from likes GROUP BY postid HAVING COUNT(postid)>1 order by count(postid) desc limit 2;
 12. select * from posts where userid=1 ORDER BY postcontent;
+13. select * from posts where userid=4 ORDER BY postdate DESC;
+14. select * from posts where postdate= 'today';
 
 ## Data Querying DML
 
