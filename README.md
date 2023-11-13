@@ -52,6 +52,9 @@ FROM likes where likes.postid = 17 or likes.postid=19;
 WHERE posts.postcontent ILIKE '%sal%';
 9. SELECT COUNT(posts.postid) AS no_of_colin_post FROM posts
 WHERE  posts.userid=2;
+10. select COUNT(likes.likeid) AS cartoon_likes from likes where likes.postid = 7;
+11. select postid, count(postid) from likes GROUP BY postid HAVING COUNT(postid)>1 order by count(postid) desc limit 2;
+12. select * from posts where userid=1 ORDER BY postcontent;
 
 ## Data Querying DML
 
