@@ -38,6 +38,21 @@ we pull the database from the docker and run the database in the dbeaver.
 7. `INSERT INTO posts(postcontent, userid) VALUES('craft',1),('sale',1),('design',1),('tips',1),('lesson',1)`
 8. `INSERT INTO likes(postid, userid) VALUES(13, 3),(13,4),(13,1),(13,3),(14,1),(14,2),(15,4),(15,2),(17,3),(17,1),(19,3),(19,2),(1,4),(1,3),(4,3),(4,4),(4,2),(7,3),(7,4),(7,1),(7,2),(8,4),(8,1),(9,4),(9,1),(9,3)`
 
+## DML commands
+1. SELECT * from users;
+2. SELECT * from posts;
+3. select posts.postcontent as likedByColin from posts left join likes on posts.postid = likes.postid where likes.userid = 2;
+4. select users.username as liked_glenda_post from users inner join likes on users.userid=likes.userid where likes.postid=13;
+5. SELECT COUNT(DISTINCT posts.postid) FROM posts inner join likes on posts.postid=likes.postid where posts.userid = 1;
+6. SELECT COUNT(likes.likeid)
+FROM likes where likes.postid = 17 or likes.postid=20;
+7. SELECT COUNT(likes.likeid)
+FROM likes where likes.postid = 17 or likes.postid=19;
+8. SELECT * FROM posts
+WHERE posts.postcontent ILIKE '%sal%';
+9. SELECT COUNT(posts.postid) AS no_of_colin_post FROM posts
+WHERE  posts.userid=2;
+
 ## Data Querying DML
 
 1. list all users `SELECT * from users;`
@@ -146,7 +161,8 @@ instaclone=# SELECT posts.postcontent as PostOfEdina FROM posts where posts.user
 8. Search all users posts with Text "sal"
 The LIKE operator is case sensitive, if you want to do a case insensitive search, use the ILIKE operator instead.
 
-```instaclone=# SELECT * FROM posts
+```
+instaclone=# SELECT * FROM posts
 WHERE posts.postcontent ILIKE '%sal%';
  postid | postcontent |  postdate  | userid
 --------+-------------+------------+--------
