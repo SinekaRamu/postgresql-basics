@@ -27,7 +27,18 @@ we pull the database from the docker and run the database in the dbeaver.
   - 1-Crafts-1, 2-sale-1, 3-design, 4-tips, 5-lesson, 6-animal, 7-cartoon, 8-gift, 9-meme, 10-craft, 11-forest, 12-bikesale, 13-book, 14-award, 15-comedy, 16-gold, 17-awarness, 18-Experiments, 19-landsale, 20-tricks.
   - `INSERT INTO likes(postid, userid) VALUES(13, 3),(13,4),(13,1),(13,3),(14,1),(14,2),(15,4),(15,2),(17,3),(17,1),(19,3),(19,2),(1,4),(1,3),(4,3),(4,4),(4,2),(7,3),(7,4),(7,1),(7,2),(8,4),(8,1),(9,4),(9,1),(9,3)`
 
-## DDL commands
+## SQL scripts
+- SQL scripts are sets of SQL (Structured Query Language) statements that are executed to perform various operations on a relational database. They provide a structured and automated way to make changes to the database schema, manipulate data, control access, and ensure the consistency and integrity of the database.
+- There are three main types of SQL scripts are:
+
+  - DDL (Data Definition Language):
+    CREATE, ALTER, DROP, TRUNCATE, etc.
+  - DML (Data Manipulation Language):
+    SELECT, INSERT, UPDATE, DELETE, etc.
+  - DCL (Data Control Language):
+    GRANT, REVOKE, etc.
+    
+### DDL commands
 
 1. `CREATE DATABASE instaclone`
 2. `\c instaclone`
@@ -38,7 +49,8 @@ we pull the database from the docker and run the database in the dbeaver.
 7. `INSERT INTO posts(postcontent, userid) VALUES('craft',1),('sale',1),('design',1),('tips',1),('lesson',1)`
 8. `INSERT INTO likes(postid, userid) VALUES(13, 3),(13,4),(13,1),(13,3),(14,1),(14,2),(15,4),(15,2),(17,3),(17,1),(19,3),(19,2),(1,4),(1,3),(4,3),(4,4),(4,2),(7,3),(7,4),(7,1),(7,2),(8,4),(8,1),(9,4),(9,1),(9,3)`
 
-## DML commands
+### DML commands
+```
 1. SELECT * from users;
 2. SELECT * from posts;
 3. select posts.postcontent as likedByColin from posts left join likes on posts.postid = likes.postid where likes.userid = 2;
@@ -57,7 +69,7 @@ WHERE  posts.userid=2;
 12. select * from posts where userid=1 ORDER BY postcontent;
 13. select * from posts where userid=4 ORDER BY postdate DESC;
 14. select * from posts where postdate= 'today';
-
+```
 ## Data Querying DML
 
 1. list all users `SELECT * from users;`
