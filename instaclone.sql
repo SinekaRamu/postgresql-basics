@@ -24,7 +24,7 @@ INSERT INTO posts(postcontent, userid) VALUES('craft',1),('sale',1),('design',1)
 INSERT INTO posts(postcontent, userid) VALUES('Animal',2),('Cartoon',2),('Gift',1),('Meme',2),('Craft',2);
 INSERT INTO posts(postcontent, userid) VALUES('Forest',3),('Bike Sale',3),('Book',3),('Award',3),('Comedy',3);
 INSERT INTO posts(postcontent, userid) VALUES('Gold',4),('Awarness',4),('Experiments',4),('Land Sale',4),('Tricks',4);
-INSERT INTO likes(postid, userid) VALUES(13, 3),(13,4),(13,1),(13,3),(14,1),(14,2),(15,4),(15,2),(17,3),(17,1),(19,3),
+INSERT INTO likes(postid, userid) VALUES(13, 3),(13,4),(13,1),(13,2),(14,1),(14,2),(15,4),(15,2),(17,3),(17,1),(19,3),
 (19,2),(1,4),(1,3),(4,3),(4,4),(4,2),(7,3),(7,4),(7,1),(7,2),(8,4),(8,1),(9,4),(9,1),(9,3);
 
 -- DML scripts
