@@ -32,10 +32,10 @@ SELECT * from users;
 -- 2. list all posts 
 SELECT * from posts;
 
--- 3. List posts that are liked by colin select posts.postcontent as likedByColin from posts left join likes on posts.postid = likes.postid where likes.userid = 2;
+-- 3. List posts that are liked by colin.
 select posts.postcontent as likedByColin from posts left join likes on posts.postid = likes.postid where likes.userid = 2;
 
--- 4. As a Glenda, she wants to know who are all liked her post book. select users.username as liked_glenda_post from users inner join likes on users.userid=likes.userid where likes.postid=13;
+-- 4. As a Glenda, she wants to know who are all liked her post book. 
 select users.username as liked_glenda_post from users inner join likes on users.userid=likes.userid where likes.postid=13;
 
 -- 5. Edina needs to know the post count which are liked by others.
